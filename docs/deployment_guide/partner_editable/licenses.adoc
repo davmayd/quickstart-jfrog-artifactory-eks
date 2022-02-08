@@ -1,5 +1,21 @@
 // Include details about any licenses and how to sign up. Provide links as appropriate.
 
-There are no additional licenses required to use this Quick Start.
+This Quick Start requires an Enterprise or Enterprise+ license for Artifactory. To use the
+Quick Start in your production environment, sign up for a free trial license, which includes
+three Artifactory Enterprise licenses. Place the license keys in the specified fields when you
+launch the Quick Start. Enterprise or Enterprise+ licenses are required due to the following
+features of this deployment:
+
+* High availability
+* S3 object storage
+
+NOTE: If the license isn’t an Enterprise or Enterprise+ license, the license is invalid,
+or the license is not included, the deployment will fail. Also, ensure that the number
+of secondary Artifactory servers is at most the amount licensed minus one, for the
+primary server. If you specify too many servers, see the <<_faq,FAQ section>> for instructions.
+
+If you use a free trial, ensure that you convert to a permanent license before your trial ends,
+otherwise the nodes will become unresponsive. You can request a quote by contacting
+https://jfrog.com/pricing/[JFrog^].
 
 There is no cost to use this Quick Start, however you will be billed for the resources deployed. For more information see the http://general-content-file[AWS Quick Start General Content Guide].

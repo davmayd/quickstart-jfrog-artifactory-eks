@@ -1,5 +1,26 @@
 This Quick Start deploys {partner-product-name} on the AWS Cloud. If you are unfamiliar with AWS Quick Starts we recommend that you read the https://aws-ia.github.io/content/qs_info.html[AWS Quick Start General Content Guide].
 
-// This deployment guide covers the steps necessary to deploy the Quick Start. For more advanced information on the product, troubleshooting, or additional functionality, see the https://{quickstart-github-org}.github.io/{quickstart-project-name}/operational/index.html[Operational guide].
+This deployment guide covers the steps necessary to deploy the Quick Start. For more advanced information on the product, troubleshooting, or additional functionality, see the https://{quickstart-github-org}.github.io/{quickstart-project-name}/operational/index.html[Operational guide].
 
 // For information on using this Quick Start for migrations, see the https://{quickstart-github-org}.github.io/{quickstart-project-name}/migration/index.html[Migration guide].
+
+This Quick Start is for administrators who want the flexibility, scale, and availability of AWS through products such as virtual private clouds (VPCs), Amazon Elastic Compute
+Cloud (Amazon EC2), Amazon Elastic Kubernetes Service (Amazon EKS), Amazon Simple Storage Service (Amazon S3), Elastic Load Balancing (ELB), and Amazon Relational
+Database Service (Amazon RDS) to deploy Artifactory as their repository manager.
+
+Amazon EC2 and Amazon EKS, along with Amazon S3 and Amazon RDS, form the foundation for the deployment. By using Amazon S3 and Amazon RDS as persistent storage
+for artifacts and the configuration, respectively, Artifactory can be completely redeployed, scaled up, or scaled down, depending on your requirements. This configuration 
+allows organizations to save on costs for multiple secondary nodes and to pay only for storage used.
+
+This Quick Start configures an https://aws.amazon.com/eks/[Amazon EKS^] cluster comprising two partitions, each with its
+own https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html[Amazon EC2 Auto Scaling^] group. One partition is labeled `artifactory-primary`. The
+other is `artifactory-secondary`. The number of primary https://kubernetes.io/docs/concepts/architecture/nodes/[Kubernetes nodes^] is hardcoded to
+one, with the Auto Scaling group configured to boot a node into another Availability Zone
+upon a failure. The secondary instances can scale up to eight https://kubernetes.io/docs/concepts/architecture/nodes/[Kubernetes nodes^] and can be
+run in any of the three Availability Zones; however, there must be enough nodes available
+to run the number of secondary https://kubernetes.io/docs/concepts/workloads/pods/pod/[pods^]. The deployment is configured and managed via
+https://helm.sh/[Helm^]. The bastion host is preconfigured with the https://helm.sh/docs/helm/#helm[Helm^] and https://kubernetes.io/docs/reference/kubectl/kubectl/[Kubectl^], which can be used to
+check or manage the cluster.
+
+A Network Load Balancer is configured to provide ingress to the VPC and to forward traffic to the NGINX pod, which provides ingress and load balancing to the Artifactory pods within
+the deployment.
