@@ -19,7 +19,7 @@ updating Artifactory). The Artifactory version for this Quick Start is *7.0.x* (
 [#update_1]
 .JFrog JFrog Artifactory service status page show current version
 [link=../{quickstart-project-name}/images/update_1.png]
-image::../images/update_1.png[image_placeholder,width=648,height=439]
+image::../../docs/operational_guide/images/update_1.png[image_placeholder,width=648,height=439]
 
 . Choose the root stack, and then choose *Update* (see <<update_2>>).
 
@@ -27,7 +27,7 @@ image::../images/update_1.png[image_placeholder,width=648,height=439]
 [#update_2]
 .Stack list and update button on the CloudFormation console
 [link=../{quickstart-project-name}/images/update_2.png]
-image::../images/update_2.png[image_placeholder,width=648,height=439]
+image::../../docs/operational_guide/images/update_2.png[image_placeholder,width=648,height=439]
 
 [start=2]
 . On the *Prerequisite* screen, Choose *Use current template*, and then choose *Next*
@@ -37,7 +37,7 @@ image::../images/update_2.png[image_placeholder,width=648,height=439]
 [#update_3]
 .Update stack, prerequisite information
 [link=../{quickstart-project-name}/images/update_3.png]
-image::../images/update_3.png[image_placeholder,width=648,height=439]
+image::../../docs/operational_guide/images/update_3.png[image_placeholder,width=648,height=439]
 
 [start=3]
 . Find the *Artifactory version* field by scrolling down (see <<update_4>>).
@@ -46,7 +46,7 @@ image::../images/update_3.png[image_placeholder,width=648,height=439]
 [#update_4]
 .CloudFormation console update page (before you change the version)
 [link=../{quickstart-project-name}/images/update_4.png]
-image::../images/update_4.png[image_placeholder,width=648,height=439]
+image::../../docs/operational_guide/images/update_4.png[image_placeholder,width=648,height=439]
 
 [start=4]
 . Enter the version number that you want to run (see <<update_5>>).
@@ -55,7 +55,7 @@ image::../images/update_4.png[image_placeholder,width=648,height=439]
 [#update_5]
 .CloudFormation console update page (after you change the version)
 [link=../{quickstart-project-name}/images/update_5.png]
-image::../images/update_5.png[image_placeholder,width=648,height=439]
+image::../../docs/operational_guide/images/update_5.png[image_placeholder,width=648,height=439]
 
 [start=5]
 . Scroll down, and choose *Next*. Choose *Next* again, unless you want to change any other tags or policies. Select the two *I acknowledge* check boxes, and choose *Update stack* (see <<update_6>>).
@@ -64,7 +64,7 @@ image::../images/update_5.png[image_placeholder,width=648,height=439]
 [#update_6]
 .Completing the update process
 [link=../{quickstart-project-name}/images/update_6.png]
-image::../images/update_6.png[image_placeholder,width=648,height=439]
+image::../../docs/operational_guide/images/update_6.png[image_placeholder,width=648,height=439]
 
 [start=6]
 . When you choose *Update Stack*, Helm takes care of a rolling upgrade. If you want to 
