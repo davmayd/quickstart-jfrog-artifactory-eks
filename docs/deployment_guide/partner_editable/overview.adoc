@@ -4,9 +4,9 @@ This deployment guide covers the steps necessary to deploy the Quick Start. For 
 
 // For information on using this Quick Start for migrations, see the https://{quickstart-github-org}.github.io/{quickstart-project-name}/migration/index.html[Migration guide].
 
-This Quick Start is for administrators who want the flexibility, scale, and availability of AWS through products such as virtual private clouds (VPCs), Amazon Elastic Compute
-Cloud (Amazon EC2), Amazon Elastic Kubernetes Service (Amazon EKS), Amazon Simple Storage Service (Amazon S3), Elastic Load Balancing (ELB), and Amazon Relational
-Database Service (Amazon RDS) to deploy Artifactory as their repository manager.
+JFrog Artifactory is a universal Kubernetes registry that can manage  packages throughout the application development lifecycle. As the single source of truth for your binaries, JFrog Artifactory speeds up the software release cycles for your deployments. JFrog Xray works with JFrog Artifactory to scan your packages for security vulnerabilities at each stage of your DevOps pipeline.
+
+By deploying JFrog on Amazon Elastic Kubernetes Service (Amazon EKS), you can run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane or nodes.
 
 Amazon EC2 and Amazon EKS, along with Amazon S3 and Amazon RDS, form the foundation for the deployment. By using Amazon S3 and Amazon RDS as persistent storage
 for artifacts and the configuration, respectively, Artifactory can be completely redeployed, scaled up, or scaled down, depending on your requirements. This configuration 
@@ -22,5 +22,4 @@ to run the number of secondary https://kubernetes.io/docs/concepts/workloads/pod
 https://helm.sh/[Helm^]. The bastion host is preconfigured with the https://helm.sh/docs/helm/#helm[Helm^] and https://kubernetes.io/docs/reference/kubectl/kubectl/[Kubectl^], which can be used to
 check or manage the cluster.
 
-A Network Load Balancer is configured to provide ingress to the VPC and to forward traffic to the NGINX pod, which provides ingress and load balancing to the Artifactory pods within
-the deployment.
+A Network Load Balancer is configured to provide ingress to the VPC and to forward traffic to the NGINX pod, which provides ingress and load balancing to the Artifactory and Xray pods within the deployment.

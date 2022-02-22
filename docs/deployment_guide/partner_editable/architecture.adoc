@@ -35,11 +35,11 @@ In the private subnets:
 ** An RDS instance connected via the private subnets of the VPC and only accessible from those subnets on port 3306.
 ** An EKS cluster with two partitions.
 ** A Helm deployment responsible for managing your Kubernetes deployment; the Helm deployment creates the following:
-*** `jfrog-artifactory` namespace
-*** NGINX SSL secret
-*** Artifactory license secret
-*** Artifactory database access secret
-*** Primary, secondary, Xray, and NGINX pods
+*** `jfrog-artifactory` namespace.
+*** NGINX SSL secret.
+*** Artifactory license secret.
+*** Artifactory database access secret.
+*** Primary, secondary, Xray, and NGINX pods.
 
 *The template that deploys the Quick Start into an existing VPC skips
 the components marked by asterisks and prompts you for your existing VPC
